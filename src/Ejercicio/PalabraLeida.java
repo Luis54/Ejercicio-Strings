@@ -12,11 +12,13 @@ public class PalabraLeida {
 		
 	}
 	public boolean EmpiezaPorVocal(){
+		boolean aux = false;
 		for (int i = 0; i < valor.length(); i++) {
-			if(valor.matches(".[aeiou]"))
-				System.out.println("La palabra contiene vocales");
+			if(valor.matches("^[aeiou]."))
+				aux=true;
+				
 		}
-		return false;
+		return aux;
 		
 	}
 	

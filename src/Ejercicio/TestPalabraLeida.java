@@ -13,7 +13,7 @@ public class TestPalabraLeida {
 		in.close();
 		System.out.println("Numero de la palabra " +v.NumeroDeLetras());
 		System.out.println("Empieza por vocal " +v.EmpiezaPorVocal());
-		System.out.println("Acaba por vocal " +v.AcabaPorVocal());
+		//System.out.println("Acaba por vocal " +v.AcabaPorVocal());
 	}
 
 }
