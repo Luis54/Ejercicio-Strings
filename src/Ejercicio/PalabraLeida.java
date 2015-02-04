@@ -13,21 +13,59 @@ public class PalabraLeida {
 	}
 	public boolean EmpiezaPorVocal(){
 		boolean aux = false;
-		for (int i = 0; i < valor.length(); i++) {
-			if(valor.matches("^[aeiou]."))
-				aux=true;
+		if(valor.matches("^[aeiouAEIOU].*"))
+			aux=true;
 				
-		}
+		
 		return aux;
 		
 	}
 	
 	public boolean AcabaPorVocal(){
-		for (int i = 0; i > valor.length(); i++) {
-			if(valor.matches(".*[aeiou]+.*"))
-				System.out.println("La palabra no acaba en vocal");
-		}
-		return false;
+		boolean aux = false;
+			if(valor.matches(".*[aeiouAEIOU]"))
+				aux=true;
+		
+		return aux;
 	}
 	
+	public int NumeroDeVocales(){
+		int contador = 0;
+		for (int i = 0; i < valor.length(); i++) {
+			if(String.valueOf(valor.charAt(i)).matches("[aeiouAEIOU]"))
+			contador++;
+			
+		}
+		
+		return contador;
+	}
+	public boolean ContieneH(){
+		return (valor.contains("h") || valor.contains("H"));
+	}
+	public boolean EsUnPalindromo(){
+		boolean aux = false;
+		String palabra = new StringBuilder(valor).reverse().toString();
+		//StringBuilder palabra = new StringBuilder(valor);
+		//palabra.reverse();
+		//String p = palabra.toString();
+		if (palabra.equalsIgnoreCase(valor) ) 
+			aux=true;
+		
+		return aux; 
+	}
+	public boolean EsUnPalindromoV(){
+		
+		String palabra = new StringBuilder(valor).reverse().toString();
+		
+		return palabra.equalsIgnoreCase(valor) ;
+			
+		
+		 
+	}
+	public boolean SonIguales(String palabra){
+		boolean aux = false;
+		if(valor.equalsIgnoreCase(palabra))
+			aux=true;
+		return aux;	
+	}
 }
