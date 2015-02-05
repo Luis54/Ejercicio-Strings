@@ -10,15 +10,19 @@ public class TestClaveSegura {
 		int longitud  = (int) (Math.random()*FUENTE_CARACTERES.length());
 		StringBuilder sBuilder = new StringBuilder();
 		for (int i = 0; i < longitud; i++) {
-			String clave = "";
-			int posicion = (int) (Math.random()*longitud);
-			clave+=FUENTE_CARACTERES.charAt(posicion);
-			String.valueOf(sBuilder.append(i)).toString();
-			System.out.println(clave.replaceAll("[\n\r]",""));
+			int posicion = (int) (Math.random()*FUENTE_CARACTERES.length());
+			sBuilder.append(FUENTE_CARACTERES.charAt(posicion));
+			
 			
 			
 		}
+		System.out.println(sBuilder);
+		ClaveSegura s = new ClaveSegura(sBuilder);
+		System.out.println("¿La clave introducida es segura? " +s.cumpletodo());
+			
+		}
+
 		
 	}
 
-}
+

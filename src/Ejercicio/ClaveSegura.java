@@ -1,9 +1,10 @@
 package Ejercicio;
 
 public class ClaveSegura {
-	private String clave;
+	private StringBuilder clave;
 	
-	public ClaveSegura(String clave) {
+	
+	public ClaveSegura(StringBuilder clave) {
 		this.clave = clave;
 	}
 	public boolean esClaveSegura(){
@@ -57,4 +58,8 @@ public class ClaveSegura {
 	}
 		return aux;
 }
+	public boolean cumpletodo(){
+		return minimoLongitudOcho() && letraMayuscula() && letraMinuscula() 
+				&& tieneDigito() && tieneDigitoOLetra();
+	}
 }
