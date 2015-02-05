@@ -6,6 +6,7 @@ public class TestPalabraLeida {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		System.out.println("Introduce la palabra");
 		Scanner in = new Scanner (System.in);
 		String palabra = in.nextLine();
@@ -14,11 +15,15 @@ public class TestPalabraLeida {
 		System.out.println("Numero de la palabra " +v.NumeroDeLetras());
 		System.out.println("Empieza por vocal " +v.EmpiezaPorVocal());
 		System.out.println("Acaba por vocal " +v.AcabaPorVocal());
-		System.out.println("Acaba por vocal " +v.NumeroDeVocales());
+		System.out.println("Numero de vocales " +v.NumeroDeVocales());
 		System.out.println("Contien H o h " +v.ContieneH());
 		System.out.println("Es Palindromo " +v.EsUnPalindromo());
-		System.out.println("Es Palindromo " +v.EsUnPalindromoV());
-		System.out.println("Son iguales las palabras " +v.SonIguales("hola"));
+		//System.out.println("Es Palindromo " +v.EsUnPalindromoV());
+		if(args.length >0){
+			String comparar = args[0];
+			System.out.println("Son iguales las palabras " +v.SonIguales(comparar));
+		}
+		
 	}
 
 }
