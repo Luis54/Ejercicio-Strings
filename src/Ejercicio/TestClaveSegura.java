@@ -12,17 +12,15 @@ public class TestClaveSegura {
 		for (int i = 0; i < longitud; i++) {
 			int posicion = (int) (Math.random()*FUENTE_CARACTERES.length());
 			sBuilder.append(FUENTE_CARACTERES.charAt(posicion));
-			
-			
-			
 		}
-		System.out.println(sBuilder);
-		ClaveSegura s = new ClaveSegura(sBuilder);
-		System.out.println("¿La clave introducida es segura? " +s.cumpletodo());
+		String posibleClave = sBuilder.toString();
+		System.out.println(posibleClave);
+		ClaveSegura s = new ClaveSegura(posibleClave);
+		System.out.println("¿La clave introducida es segura? " +s.esClaveSegura());
 			
-		}
+	}
 
 		
-	}
+}
 
 
