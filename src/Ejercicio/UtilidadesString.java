@@ -6,8 +6,13 @@ public class UtilidadesString {
 	public final String[] ARTICULOS_INDETERMINADOS = {"un","unos","una","unas"};
 	public final String[] PREPOSICIONES = {"a", "ante", "bajo", "cabe", "con", "contra", "de", "desde", "en", "entre",
 	"hacia", "hasta","para", "por", "según", "sin", "so", "sobre", "tras"};
-	
+
 	StringBuilder cadena = new StringBuilder();
+	
+	public UtilidadesString(StringBuilder cadena) {
+		this.cadena = cadena;
+	}
+
 	public int numeroPalabras(String frase){
 		return frase.length();
 	}
